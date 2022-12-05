@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if form %}
+<form method="post" class="quiz">
+    {% csrf_token %}
+        <h1>Un petit quizz ?</h1>
+        {% for t in l %}
+            <label for="question">{{t.0}}</label>
+            {{t.1}}
+        {% endfor %}
+    
+    <input class="btn" type="submit" value="Valider">
+</form>
+
+{% else %}
+
+{% for t in l %}
+    <div class="reponse">
+        {{t.0}}
+        {{t.1}}
+        {{t.2}}
+        {{t.3}}
+    </div>
+{% endfor %}
+
+{% endif %}
+
+{% endblock content %}

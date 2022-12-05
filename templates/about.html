@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<figure class="about-img">
+    <img src="{% static 'img/SIDA1.png' %}" alt="Trulli">
+</figure>
+
+
+<section class="about">
+    <h2>Problèmatiques liée à L'IA dans notre projet</h2>
+
+<p>On a utilisé le deep learning pour générer des questions  qui concerne le sida et en même temps qui verifie des réponse utilisateurs en utilisant un API nlpcloud 
+</p>
+
+<p>notre problèmatiques était d'avoir une banque de questions sur le SIDA pour l'intégrer dans notre application  en une seule nuit , 
+    on avait en effet ni le temps ni les ressources suffisantes pour le faire , L'IA a donc répondu a notre besoin sur cette problèmatique de manière semi automatisé.</p>
+
+<p>Nous avons également utilisé l'intelligence artificiel pour scrapper les dernier tweet qui parlent de SIDA ,VIH,AIDS pour la mettre sur notre page d'accueil.</p>
+<p>Nous aurions pu également utliser une IA pour implémenter dans django , un formulaire , un escape-game , avec par exemple beta openai.com</p>
+<p>Une page statistiques avec les données les plus récentes ou même une mind map aurait pu être faite.</p>
+<p>Une solution permettant de répondre aux question concernant le sujet , a partir de reconnaisance vocale est envisageable également.</p>
+<p>Un "profilage" du visiteur qui l'oriente vers le serious game le plus adapté à sa personalité aurait pu être fait (évidemment pas en une nuit) afin que chacun puisse s'éduquée avec une méthode différente , comme nous apprenons tous de manière différentes.</p>
+<p>Un chatbox aurait pu être . </p>
+<p>Une IA qui jette de l'eau froide sur nos coéquipier qui dorment nous aurait bien aider </p>
+<p>En terme de possibilité Le domaine de L'IA ne tarit pas d'idée </p>
+<p>Nous avons également eu une limitation quand au sujet , comme nous ne pouvions pas scrapper sur internet n'importe quel sujet sans surveillance . Ni générer des quizz sur le sujet que requete l'utilisateur avec un choix libre de sa part , des sujets inadapté aurait pu survenir.</p>
+
+
+<h2>Avantages et inconvénients</h2>
+<p>De par le nombre de requetes que nous faisons , nous ne pouvons pas laisser une empreinte écologique basse , ou extremement difficilement en utilisant deux serveurs ( a notre connaisance)
+
+    par ailleurs comme nous n'avons pas codé nous même la solution de deep learning , notre projet est aussi dépendant du site que nous utilisons.</p>
+<p>Par ailleurs nous utilisons pour la sensibilisation et la dédramatisation une méthode qui exprime notre foi en l'intelligence collective 
+    (nous somme pour des raisons psychologiques a suivre les avis communs , n'en déplaisent a certains) , mais tout au moins en fournissant l'éducation nécessaire , nous esperons au moins questionner l'avis publique.
+    integration  au niveau de l'api est difficile ,et il fallait comprendre que il fallait s'abonner et ce n'était pas très clair</p>
+
+<p>Nous avons pu générer un grand nombre de question et de réponse automatiquement , permettre dans un champ en string de reconnaitre de bonne réponse que une égalité simple entre string évidemment compté en mauvaise réponse 
+    Le site grâce a l'IA est également bien plus interactif et moins redondant , il change a chaque fois.</p>
+ 
+ 
+ 
+ 
+<p> use-case   : Nous n'en avons pas comme cela est déja implémenter , mais par exemple le tweet de Emanuel Macron sur le sida a recueilli 
+    979 Like (a l'heure ou ceci est écrit) ce qui permet de voir la popularité sur le moment du sujet .
+    Si une personne écrit une approximation de la réponse (ou avec une erreur de typographie)</p>
+
+</section>
+
+{% endblock content %}

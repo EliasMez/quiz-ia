@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+}
+
+a {
+  &:hover {
+    color: rgb(195, 192, 192);
+  }
+}
+
+main {
+  min-height: 100vh;
+}
+
+body {
+  background-color: #181A26;
+  padding-top: 75px;
+  min-height: 100vh;
+  position: relative;
+}

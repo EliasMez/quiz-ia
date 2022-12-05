@@ -1,0 +1,39 @@
+.quiz {
+    width: 500px;
+    label {
+        width: 100%;
+    }
+    input {
+        background-color: #101119;
+        width: 100%;
+        margin: 10px 0;
+        &:hover {
+            background-color: #101119;
+            cursor: text;
+        }
+    }
+    .btn {
+        width: 50%;
+        &:hover {
+            background-color: #100b50;
+            cursor: pointer;
+        }
+    }
+    .reponse {
+        width: 500px;
+        margin: 0 25px;
+    }
+}
+
+.about {
+    width: 50%;
+    margin: 0 auto;
+    h2 {
+        margin: 20px 0;
+    }
+}
+
+.about-img {
+    margin: auto;
+    height:  auto;
+}

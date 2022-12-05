@@ -1,0 +1,50 @@
+{% load static %}
+<nav>
+  <div class="nav-container">
+    <figure class='logo'>
+      <a href="/">
+        <img src="{% static 'img/logo.png' %}" alt="#">
+      </a>
+    </figure>
+    <ul>
+      <li>
+        <a href="/">
+          Accueil
+        </a>
+      </li>
+      <li>
+        <a href="/quiz">
+          Quiz
+        </a>
+      </li>
+      <li class="last">
+        <a href="/about">
+          A propos
+        </a>
+      </li>
+      {% if user.is_authenticated %}
+        <li>
+          <a href="#">
+            Profil
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'logout' %}?next={{request.path}}">
+            Déconnexion
+          </a>
+        </li>
+      {% else %}
+        <li>
+          <a href="{% url 'login' %}">
+            Connexion
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'signup' %}">
+            Inscription
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>

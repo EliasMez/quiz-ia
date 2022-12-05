@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <p class="alert">Nom d'utilisateur ou mot de passe incorrect !</p>
+    {% endif %}
+
+    {% if next %}
+        {% if user.is_authenticated %}
+            <p class="alert">Vous n'avez pas la permission d'accéder à cette page</p>
+        {% else %}
+            <p class="alert">Merci de vous connecter ici.</p>
+        {% endif %}
+    {% endif %}
+
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <h1>Connexion</h1>
+        {% if error_message %}
+            <p class="bg-danger p-d ml-b">{{ error_message }}</p>
+        {% endif %}
+        <div>
+            <label for="username" class="col-md-4 control-label ">Nom d'utilisateur:</label>
+            <input name="username" value="" type="text" class="input input-bordered input-secondary w-full max-w-xs" />
+        </div>
+        <div>
+            <label for="password" class="col-md-4 control-label text-right">Mot de passe:</label>
+            <input name="password" type="password"  class="input input-bordered input-secondary w-full max-w-xs" />
+        </div>
+        
+
+        <input name="login" type="submit" value="Se connecter" class="btn btn-outline btn-secondary rounded-lg" />  
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+{% endblock %}
