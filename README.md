@@ -12,3 +12,6 @@ Nous avons egalément proposé trois des tweet actuelle les plus likée sur la p
 Pour lancer l'application en local vous devez créer un fichier ".env" à la racine du projet avec dans celui ci :
 - SECRET_KEY=django-insecure-th2m4mpk-s0r-3_4$zo1n+qx9$ukwt*fe_&vp3*($s1dsbz)=_
 - token=20c18683f410a86a2a929289d93b90b0c1c1a181
+
+# Site internet
+https://les-simploniens.herokuapp.com/
